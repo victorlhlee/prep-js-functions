@@ -12,6 +12,9 @@
  *  functions.
  */
 
+ var a = 3;
+ var b = 2;
+ var c = 1;
 
 /**
  *  #2
@@ -20,6 +23,14 @@
  *  This function returns the result of adding `a` and `b` together.
  *  Store this value in a variable named `sum`.
  */
+
+ function add(x, y){
+  return x + y;
+ }
+ var sum = add(a, b);
+ console.log('function add: ' + sum);
+
+
 
 
 /**
@@ -30,6 +41,11 @@
  *  Store this value in a variable named `difference`
  */
 
+function subtract(x, y){
+  return x - y;
+}
+var difference = subtract(a, b);
+console.log('function difference: ' + difference);
 
 /**
  *  #4
@@ -39,7 +55,12 @@
  *  Store this value in a variable named `product`
  */
 
+function multiply(x, y){
+  return x * y;
+}
 
+var product = multiply(a, b);
+console.log('function product: ' + product);
 /**
  *  #5
  *  Function - checkDifference
@@ -50,7 +71,12 @@
  *  value stored in `difference`.
  */
 
+function checkDifference(){
+  return "My football team lost " + difference + " times this week";
+}
 
+var season = checkDifference();
+console.log(season);
 /**
  *  #6
  *  Function - checkSum
@@ -61,6 +87,12 @@
  *  stored in the variable `sum`.
  */
 
+function checkSum(){
+  return "I CAN ADDZ " + sum + " NUMBERS";
+}
+
+var adding = checkSum();
+console.log(adding);
 
 /**
  *  #7
@@ -71,6 +103,12 @@
  *  then prints the result to the console.
  */
 
+function checkProduct(){
+  return product * difference;
+}
+
+var multiples = checkProduct();
+console.log('function checkProduct: ' + multiples);
 
 /**
  *  #8
@@ -86,7 +124,15 @@
  *      addThenSubtract(4, 5, 7); //-> returns 2 because 4 + 5 - 7 = 2
  */
 
+function addThenSubtract(n1, n2, n3){
+  var sum = add(n1, n2);
+  var difference = subtract(sum, n3);
 
+  return difference;
+}
+
+var plusAndMinus = addThenSubtract(a, b, c);
+console.log('function addThenSubtract: ' + plusAndMinus);
 /**
  *  #9
  *  Function - addThenMultiply
@@ -98,6 +144,15 @@
  *
  *  Store the return of this function to a variable named `howMany`
  */
+function addThenMultiply(n1, n2, n3){
+  var sum = add(n1, n2);
+  var product = multiply(sum, n3);
+
+  return product;
+
+}
+var howMany = addThenMultiply(a, b, c);
+console.log('function addThenMultiply: ' + howMany);
 
 
 /**
@@ -115,6 +170,12 @@
  * Store the return value to a variable named `myFullName`
  */
 
+function createFullName(firstName, lastName){
+  return firstName + " " + lastName;
+
+}
+var myFullName = createFullName("Heisenberg", "White");
+console.log(myFullName);
 
 /**
  *  #11
@@ -131,6 +192,17 @@
  *  Store the return value to a variable named** `canDrinkBeer`
  */
 
+function verifyDrinkingAge(age){
+  if(age < 21){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+var canDrinkBeer = verifyDrinkingAge(21);
+console.log('so i can drink or what?...' + canDrinkBeer);
+
 
 /**
  *  #12
@@ -142,6 +214,16 @@
  *  should be "This Party will have an open bar".
  */
 
+function throwParty(){
+  if(canDrinkBeer === false){
+    return "The Party will have tons of Cake!";
+  }else{
+    return "This Party will have an open bar.";
+  }
+}
+
+var canParty = throwParty();
+console.log(canParty);
 
 /**
  *  #13
@@ -163,6 +245,16 @@
  *      "Peter Bojanglesloves loves to eat California Burritos"
  */
 
+function eatFood(firstName, lastName, food){
+  var myFullName = createFullName(firstName, lastName);
+
+  return myFullName + " loves to eat " + food;
+}
+
+var eaten = eatFood("Walter", "White", "Los Pollos Hermanos");
+console.log(eaten);
+
+
 
 /**
  *  #14
@@ -176,3 +268,14 @@
  *  othewise the message will be `"Let it go.... LET IT GOOOOOOoOoOoOo..."`
  */
 
+function repeater(print, legal){
+  for(var i = 0; i<print; i++){
+     if(canDrinkBeer === true){
+    console.log("Bacon Pancakes, makin' Bacon Pancakes....");
+  }else{
+    console.log("Let it go...Let it GOOOOOOoOoOoOo");
+  }
+  }
+}
+var canNoCan = repeater(howMany, canDrinkBeer);
+/*console.log(canNoCan);*/
