@@ -12,8 +12,9 @@
  *  functions.
  */
 
-var a = 8;
+var a = 7;
 var b = 3;
+
  
 
 /**
@@ -24,24 +25,33 @@ var b = 3;
  *  Store this value in a variable named `sum`.
  */
 
-//option 1: scenic route
-function add(number1, number2){
-  var result = number1 + number2;
-  return result;
-}
-add();
-
-var sum = add(a,b);
-console.log('adding a and b = ', sum);
-
-//option 2: shorter route
 function add(number1, number2){
   return number1 + number2;
 }
 add();
 
 var sum = add(a,b);
-console.log('adding a and b = ', sum);
+console.log(sum);
+
+
+//option 1: scenic route
+/*function add(number1, number2){
+  var result = number1 + number2;
+  return result;
+}
+add();
+
+var sum = add(a,b);
+console.log('adding a and b = ', sum);*/
+
+//option 2: shorter route
+/*function add(number1, number2){
+  return number1 + number2;
+}
+add();
+
+var sum = add(a,b);
+console.log('adding a and b = ', sum);*/
 
 
 /**
