@@ -12,8 +12,8 @@
  *  functions.
  */
 
-var a = 10;
-var b = 3;
+var a = 3;
+var b = 5;
 
  
 
@@ -25,13 +25,17 @@ var b = 3;
  *  Store this value in a variable named `sum`.
  */
 
-function add(num1, num2){
-  return num1 + num2;
-}
-add();
+function add(n1, n2){
 
-var sum = add(a,b);
+  return n1 + n2;
+
+}
+
+var sum = add(a, b);
 console.log(sum);
+
+
+
 
 
 //option 1: scenic route
