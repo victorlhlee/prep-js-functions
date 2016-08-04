@@ -25,8 +25,8 @@ var b = 3;
  *  Store this value in a variable named `sum`.
  */
 
-function add(number1, number2){
-  return number1 + number2;
+function add(num1, num2){
+  return num1 + num2;
 }
 add();
 
