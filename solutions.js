@@ -202,18 +202,16 @@ console.log('product x difference = ', checkProduct());
  *  **example:**
  *      addThenSubtract(4, 5, 7); //-> returns 2 because 4 + 5 - 7 = 2
  */
-var c = 3;
-function addThenSubtract(number1, number2, number3){
-  var addUp = number1 + number2;
-  var minus = addUp - number3;
-  return minus;
+var c = 7;
+function addThenSubtract(n1, n2, n3){
+ var addUp = add(n1, n2);
+ var minus = subtract(addUp, n3);
+ return minus;
 
 }
-addThenSubtract();
-console.log('addThenSubtract 3 numbers = ', addThenSubtract(a, b, c));
 
-//or pass in your own number values:
-console.log('addThenSubtract 3 numbers = ', addThenSubtract(88, 7, 3));
+var results = addThenSubtract(a, b, c);
+console.log("addThenSubtract: ", results );
 
 /**
  *  #9
@@ -227,17 +225,17 @@ console.log('addThenSubtract 3 numbers = ', addThenSubtract(88, 7, 3));
  *  Store the return of this function to a variable named `howMany`
  */
 
-function addThenMultiply(number1, number2, number3){
-  var addUp = number1 + number2;
-  var multiply = addUp * number3;
-  return multiply;
+function addThenMultiply(n1, n2, n3){
+  var addUp = add(n1, n2);
+  var multi = multiply(addUp, n3);
+
+  return multi;
+
 }
-addThenMultiply();
-var howMany = addThenMultiply(a,b,c);
-console.log("howMany", howMany);
-//or pass in your own numbers
-var howMany = addThenMultiply(1,3,2);
-console.log("howMany", howMany);
+
+var howMany = addThenMultiply(a, b, c);
+console.log("addThenMuliply: ", howMany);
+
 
 /**
  *  #10
@@ -340,21 +338,16 @@ console.log(throwParty());
   *  **example output:**
  *      "Peter Bojanglesloves loves to eat California Burritos"
  */
-//option 1 scenic route
-function eatFood(firstName, lastName, food){
-  var person = firstName + " " + lastName;
-  var result = person + " loves to eat " + food;
-  return result;
-}
-eatFood();
-console.log(eatFood("Biggie", "Smalls", "Spam Musubis"));
 
-//option 2 shorter route
 function eatFood(firstName, lastName, food){
-  return firstName + " " + lastName + " loves to eat " + food;
+  var naming = createFullName(firstName, lastName);
+  return naming + " loves to eat " + food + ".";
+
 }
-eatFood();
-console.log(eatFood("David", "Ige", "Chicken Katsu"));
+
+var eaten = eatFood("Biggie", "Smalls", "Wonton soup");
+console.log(eaten);
+
 
 /**
  *  #14
