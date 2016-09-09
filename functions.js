@@ -12,8 +12,7 @@
  *  functions.
  */
 
-var a = 10;
-var b = 5;
+
 
  
 
@@ -25,37 +24,8 @@ var b = 5;
  *  Store this value in a variable named `sum`.
  */
 
-function add(n1, n2){
-
-  return n1 + n2;
-
-}
-
-var sum = add(a, b);
-console.log(sum);
 
 
-
-
-
-//option 1: scenic route
-/*function add(number1, number2){
-  var result = number1 + number2;
-  return result;
-}
-add();
-
-var sum = add(a,b);
-console.log('adding a and b = ', sum);*/
-
-//option 2: shorter route
-/*function add(number1, number2){
-  return number1 + number2;
-}
-add();
-
-var sum = add(a,b);
-console.log('adding a and b = ', sum);*/
 
 
 /**
@@ -66,24 +36,6 @@ console.log('adding a and b = ', sum);*/
  *  Store this value in a variable named `difference`
  */
 
-//option 1 scenic route
-function subtract(number1, number2){
-  var result = number1 = number2;
-  return result;
-}
-subtract();
-
-var difference = subtract(a,b);
-console.log('subracting a from b = ', difference);
-
-//option 2 shorter route
-function subtract(number1, number2){
-  return number1 - number2;
-}
-subtract();
-
-var difference = subtract(a,b);
-console.log('subracting a from b = ', difference);
 
 
 /**
@@ -94,24 +46,7 @@ console.log('subracting a from b = ', difference);
  *  Store this value in a variable named `product`
  */
 
-//option 1 scenic route
-function multiply(number1, number2){
-  var result = number1 * number2;
-  return result;
-}
-multiply();
 
-var product = multiply(a,b);
-console.log('multiplying a and b = ', product);
-
-//option 2 shorter route
-function multiply(number1, number2){
-  return number1 * number2;
-}
-multiply();
-
-var product = multiply(a,b);
-console.log('multiplying a and b = ', product);
 
 /**
  *  #5
@@ -122,21 +57,7 @@ console.log('multiplying a and b = ', product);
  *  "My football team lost X times this week", where `X` is the
  *  value stored in `difference`.
  */
-//option 1 scenic route
-function checkDifference(number){
-  var result = "My football team lost " + number + " times this week.";
-  return result;
 
-}
-checkDifference();
-console.log(checkDifference(difference));
-
-//option 2 shorter route
-function checkDifference(){
-  return "My football team lost " + difference + " times this week.";
-}
-checkDifference();
-console.log(checkDifference());
 
 /**
  *  #6
@@ -148,20 +69,7 @@ console.log(checkDifference());
  *  stored in the variable `sum`.
  */
 
-//option 1 scenic route
-function checkSum(number){
-  var result = "I CAN ADDZ " + number + " NUMBERS";
-  return result;
-}
-checkSum();
-console.log(checkSum(sum));
 
-//option 2 shorter route
-function checkSum(){
-  return "I CAN ADDZ " + sum + " NUMBERS";
-}
-checkSum();
-console.log(checkSum());
 
 /**
  *  #7
@@ -171,23 +79,7 @@ console.log(checkSum());
  *  multiplies it by the number stored at `difference` and
  *  then prints the result to the console.
  */
-//option 1 scenic route
-function checkProduct(number1, number2){
-  var result = number1 * number2;
-  return result;
 
-}
-checkProduct();
-console.log('product x difference = ', checkProduct(product, difference));
-
-//option 2 shorter route
-function checkProduct(){
-  return product * difference;
-}
-checkProduct();
-
-checkProduct();
-console.log('product x difference = ', checkProduct());
 
 /**
  *  #8
@@ -202,18 +94,7 @@ console.log('product x difference = ', checkProduct());
  *  **example:**
  *      addThenSubtract(4, 5, 7); //-> returns 2 because 4 + 5 - 7 = 2
  */
-var c = 3;
-function addThenSubtract(number1, number2, number3){
-  var addUp = number1 + number2;
-  var minus = addUp - number3;
-  return minus;
 
-}
-addThenSubtract();
-console.log('addThenSubtract 3 numbers = ', addThenSubtract(a, b, c));
-
-//or pass in your own number values:
-console.log('addThenSubtract 3 numbers = ', addThenSubtract(88, 7, 3));
 
 /**
  *  #9
@@ -227,17 +108,6 @@ console.log('addThenSubtract 3 numbers = ', addThenSubtract(88, 7, 3));
  *  Store the return of this function to a variable named `howMany`
  */
 
-function addThenMultiply(number1, number2, number3){
-  var addUp = number1 + number2;
-  var multiply = addUp * number3;
-  return multiply;
-}
-addThenMultiply();
-var howMany = addThenMultiply(a,b,c);
-console.log("howMany", howMany);
-//or pass in your own numbers
-var howMany = addThenMultiply(1,3,2);
-console.log("howMany", howMany);
 
 /**
  *  #10
@@ -254,14 +124,7 @@ console.log("howMany", howMany);
  * Store the return value to a variable named `myFullName`
  */
 
-function createFullName(firstName, lastName){
-  var result = firstName + " " + lastName;
-  return result;
-}
-createFullName();
 
-var myFullName = createFullName("Grace", "Hopper");
-console.log("The person who coined the term debugging is", myFullName);
 /**
  *  #11
  *  Function - verifyDrinkingAge
@@ -277,16 +140,7 @@ console.log("The person who coined the term debugging is", myFullName);
  *  Store the return value to a variable named** `canDrinkBeer`
  */
 
-function verifyDrinkingAge(age){
-  if(age >= 21){
-    return true;
-  }else{
-    return false;
-  }
-}
-verifyDrinkingAge();
-var canDrinkBeer = verifyDrinkingAge(101);
-console.log('Can I have a swig of that drink?', canDrinkBeer);
+
 
 
 /**
@@ -299,27 +153,7 @@ console.log('Can I have a swig of that drink?', canDrinkBeer);
  *  should be "This Party will have an open bar".
  */
 
-//option 1 
-function throwParty(drinkUp){
-  if(drinkUp === false){
-    return "The Party will have tones of Cake!";
-  }else{
-    return "This party will have an open bar";
-  }
-}
-throwParty();
-console.log(throwParty(canDrinkBeer));
 
-//option 2
-function throwParty(){
-  if(canDrinkBeer === false){
-    return "The Party will have tones of Cake!";
-  }else{
-    return "This party will have an open bar";
-  }
-}
-throwParty();
-console.log(throwParty());
 
 /**
  *  #13
@@ -340,21 +174,7 @@ console.log(throwParty());
   *  **example output:**
  *      "Peter Bojanglesloves loves to eat California Burritos"
  */
-//option 1 scenic route
-function eatFood(firstName, lastName, food){
-  var person = firstName + " " + lastName;
-  var result = person + " loves to eat " + food;
-  return result;
-}
-eatFood();
-console.log(eatFood("Biggie", "Smalls", "Spam Musubis"));
 
-//option 2 shorter route
-function eatFood(firstName, lastName, food){
-  return firstName + " " + lastName + " loves to eat " + food;
-}
-eatFood();
-console.log(eatFood("David", "Ige", "Chicken Katsu"));
 
 /**
  *  #14
@@ -368,13 +188,4 @@ console.log(eatFood("David", "Ige", "Chicken Katsu"));
  *  othewise the message will be `"Let it go.... LET IT GOOOOOOoOoOoOo..."`
  */
 
-function repeater(number, drinkUp){
-  for (var i = 0; i<number; i++){
-    if(drinkUp === true){
-      console.log("Bacon Pancakes, makin' Bacon Pancakes");
-    }else{
-      console.log("Let it go... LET IT GOOOOOOoOoOoOo...");
-    }
-  }
-}
-repeater(howMany, canDrinkBeer);
+
