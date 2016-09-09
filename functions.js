@@ -26,8 +26,6 @@
 
 
 
-
-
 /**
  *  #3
  *  Function - subtract
@@ -35,6 +33,7 @@
  *  This function returns the result of subtracting `b` from `a`.
  *  Store this value in a variable named `difference`
  */
+
 
 
 
@@ -79,6 +78,7 @@
  *  multiplies it by the number stored at `difference` and
  *  then prints the result to the console.
  */
+
 
 
 /**
@@ -142,7 +142,6 @@
 
 
 
-
 /**
  *  #12
  *  Function - throwParty
@@ -174,6 +173,7 @@
   *  **example output:**
  *      "Peter Bojanglesloves loves to eat California Burritos"
  */
+
 
 
 /**
