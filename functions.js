@@ -12,9 +12,9 @@
  *  functions.
  */
 
-
-
- 
+var a = 5;
+var b = 7;
+var c = 9;
 
 /**
  *  #2
@@ -23,6 +23,13 @@
  *  This function returns the result of adding `a` and `b` together.
  *  Store this value in a variable named `sum`.
  */
+
+function add(n1, n2){
+  return n1 + n2;
+}
+
+var sum = add(a, b);
+console.log("function add: ", sum);
 
 
 
@@ -33,6 +40,14 @@
  *  This function returns the result of subtracting `b` from `a`.
  *  Store this value in a variable named `difference`
  */
+
+function subtract(n1, n2){
+  return n2 - n1;
+
+}
+
+var difference = subtract(a,b);
+console.log("function subtract: ", difference);
 
 
 
@@ -45,6 +60,13 @@
  *  Store this value in a variable named `product`
  */
 
+function multiply(n1, n2){
+
+  return n2 * n1;
+}
+
+var product = multiply(a, b);
+console.log("function mulitply: ", product);
 
 
 /**
@@ -57,6 +79,14 @@
  *  value stored in `difference`.
  */
 
+function checkDifference(x){
+  return "My football team lost " + x + " times this week!";
+
+}
+var teamResults = checkDifference(difference);
+console.log(teamResults);
+
+
 
 /**
  *  #6
@@ -68,7 +98,12 @@
  *  stored in the variable `sum`.
  */
 
+function checkSum(x){
+  return "I can addz " + x + " numbers.";
 
+}
+
+console.log(checkSum(sum));
 
 /**
  *  #7
@@ -79,6 +114,14 @@
  *  then prints the result to the console.
  */
 
+function checkProduct(n1, n2){
+  return n1 * n2;
+
+}
+var results = checkProduct(product, difference);
+console.log("ruby's way: ", results);
+
+console.log(checkProduct(product, difference));
 
 
 /**
@@ -95,6 +138,21 @@
  *      addThenSubtract(4, 5, 7); //-> returns 2 because 4 + 5 - 7 = 2
  */
 
+//long scenic route
+/*function addThenSubtract(n1, n2, n3){
+  var sum = add(n1, n2);
+  var difference = subtract(sum, n3);
+  return difference;
+
+}
+
+console.log(addThenSubtract(a, b, c));*/
+
+//cut to da chase
+function addThenSubtract(n1, n2, n3){
+  return subtract(add(n1, n2), n3);
+}
+console.log(addThenSubtract(a, b, c));
 
 /**
  *  #9
@@ -107,6 +165,26 @@
  *
  *  Store the return of this function to a variable named `howMany`
  */
+
+/*scenic tour*/
+/*function addThenMultiply(n1, n2, n3){
+
+  var sum = add(n1, n2);
+  var howMany = multiply(sum, n3);
+
+  return howMany;
+
+}
+
+console.log(addThenMultiply(a, b, c));*/
+
+function addThenMultiply(n1, n2, n3){
+  return multiply(add(n1, n2), n3);
+
+}
+
+var howMany = addThenMultiply(a,b,c);
+console.log(addThenMultiply(a, b, c));
 
 
 /**
@@ -124,7 +202,12 @@
  * Store the return value to a variable named `myFullName`
  */
 
+function createFullName(firstName, lastName){
+  return firstName + " " + lastName;
+}
 
+var myFullName = createFullName("fiddy", "centz");
+console.log(myFullName);
 /**
  *  #11
  *  Function - verifyDrinkingAge
@@ -140,7 +223,18 @@
  *  Store the return value to a variable named** `canDrinkBeer`
  */
 
+function verifyDrinkingAge(age){
+  if(age >= 21){ 
+    return true;
+  }else{
+    return false;
+  }
+}
 
+var canDrinkBeer = verifyDrinkingAge(22);
+console.log("candrinkBeer: ", canDrinkBeer);
+
+console.log(verifyDrinkingAge(20.9));
 
 /**
  *  #12
@@ -152,7 +246,15 @@
  *  should be "This Party will have an open bar".
  */
 
+function throwParty(age){
+  if(age === false){
+    return "The party will have tons of cake!";
+  }else{
+    return "This party will have an open bar!";
+  }
+}
 
+console.log(throwParty(canDrinkBeer));
 
 /**
  *  #13
@@ -174,7 +276,29 @@
  *      "Peter Bojanglesloves loves to eat California Burritos"
  */
 
+/*function eatFood(firstName, lastName, food){
+  function createFullName(firstName, lastName){
+    return firstName + lastName;
+  }
+  return createFullName(firstName + " " + lastName + " loves to eat " + food);
+}
+console.log(eatFood("Bob", "BigBoy", "burgers"));*/
 
+function eatFood(firstName, lastName, food){
+ var myFullName = createFullName(firstName, lastName);
+ return myFullName + " loves to eat " + food;
+
+}
+var input = eatFood("Ruby", "M", "pizza");
+console.log(input);
+
+/*function eatFood(food){
+  return myFullName + " loves to eat " + food;
+
+}
+
+var foodie = eatFood("laulau");
+console.log(foodie);*/
 
 /**
  *  #14
@@ -188,4 +312,27 @@
  *  othewise the message will be `"Let it go.... LET IT GOOOOOOoOoOoOo..."`
  */
 
+/*function repeater(x, age){
+  for(var i = 0; i<x; i++){
+    if(age === true){
+      console.log("bacon Pancakes");
+    }else{
+      console.log("let it go...");
+    }
+  }
+}
+repeater(howMany, canDrinkBeer);*/
 
+
+function repeater(){
+  var msg;
+  if(canDrinkBeer === true){
+    msg = "bacon waffles";
+  }else{
+    msg = "let it go";
+  }
+  for(var i = 0; i<howMany; i++){
+    console.log(msg);
+  }
+}
+repeater();
